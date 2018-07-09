@@ -1,4 +1,3 @@
-var bip39 = require("bip39");
 var hdkey = require('ethereumjs-wallet/hdkey');
 var ProviderEngine = require("web3-provider-engine");
 var FiltersSubprovider = require('web3-provider-engine/subproviders/filters.js');
@@ -7,15 +6,14 @@ var ProviderSubprovider = require("web3-provider-engine/subproviders/provider.js
 var Web3 = require("web3");
 var Transaction = require('ethereumjs-tx');
 
-function HDWalletProvider(mnemonic, provider_url, address_index=0, num_addresses=1) {
-  this.mnemonic = mnemonic;
-  this.hdwallet = hdkey.fromMasterSeed(bip39.mnemonicToSeed(mnemonic));
-  this.wallet_hdpath = "m/44'/60'/0'/0/";
+function HDWalletProvider(xprv, provider_url, address_index=0, num_addresses=1) {
+  this.xprv = xprv;
+  this.hdwallet = hdkey.fromExtendedKey(xprv);
   this.wallets = {};
   this.addresses = [];
 
-  for (let i = address_index; i < address_index + num_addresses; i++){
-    var wallet = this.hdwallet.derivePath(this.wallet_hdpath + i).getWallet();
+  for (let i = address_index; i < address_index + num_addresses; i++) {
+    var wallet = this.hdwallet.deriveChild(i).getWallet();
     var addr = '0x' + wallet.getAddress().toString('hex');
     this.addresses.push(addr);
     this.wallets[addr] = wallet;

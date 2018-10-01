@@ -1,14 +1,14 @@
 {
-  "name": "truffle-hdwallet-provider",
-  "version": "0.0.5",
-  "description": "HD Wallet-enabled Web3 provider",
+  "name": "truffle-hdwallet-provider-xprv",
+  "version": "0.0.0",
+  "description": "HD Wallet-enabled Web3 provider with xprv support",
   "main": "index.js",
   "scripts": {
     "test": "mocha --timeout 5000"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trufflesuite/truffle-hdwallet-provider.git"
+    "url": "git+https://github.com/nunsie/truffle-hdwallet-provider-xprv.git"
   },
   "keywords": [
     "etheruem",
@@ -17,12 +17,12 @@
     "mnemonic",
     "provider"
   ],
-  "author": "Tim Coulter <tim.coulter@consensys.net>",
+  "author": "nusrath",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/trufflesuite/truffle-hdwallet-provider/issues"
+    "url": "https://github.com/nunsie/truffle-hdwallet-provider-xprv/issues"
   },
-  "homepage": "https://github.com/trufflesuite/truffle-hdwallet-provider#readme",
+  "homepage": "https://github.com/nunsie/truffle-hdwallet-provider-xprv#readme",
   "dependencies": {
     "ethereumjs-wallet": "^0.6.0",
     "web3": "^0.18.2",

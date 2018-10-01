@@ -1,6 +1,6 @@
 {
   "name": "truffle-hdwallet-provider-xprv",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "HD Wallet-enabled Web3 provider with xprv support",
   "main": "index.js",
   "scripts": {

@@ -1,7 +1,7 @@
 const Ganache = require('ganache-core');
 const assert = require('assert');
 const WalletProvider = require('../index.js');
-const mnemonic = 'candy maple cake sugar pudding cream honey rich smooth crumble sweet treat';
+const xprv = 'xprv9s21ZrQH143K4KqQx9Zrf1eN8EaPQVFxM2Ast8mdHn7GKiDWzNEyNdduJhWXToy8MpkGcKjxeFWd8oBSvsz4PCYamxR7TX49pSpp3bmHVAY';
 
 describe("HD Wallet Provider", function(done) {
   var Web3 = require('web3');
@@ -21,7 +21,7 @@ describe("HD Wallet Provider", function(done) {
   })
 
   it('provides', function(done){
-    provider = new WalletProvider(mnemonic, `http://localhost:${port}`);
+    provider = new WalletProvider(xprv, `http://localhost:${port}`);
     web3.setProvider(provider);
 
     web3.eth.getBlockNumber((err, number) => {

@@ -48,7 +48,7 @@ You can easily use this within a Truffle configuration. For instance:
 
 truffle.js
 ```javascript
-var HDWalletProvider = require("truffle-hdwallet-provider");
+var HDWalletProvider = require("truffle-hdwallet-provider-xprv");
 
 var xprv = "xprv9s21ZrQH143K4KqQx9Zrf1eN8EaPQVFxM2Ast8mdHn7GKiDWzNEyNdduJhWXToy8MpkGcKjxeFWd8oBSvsz4PCYamxR7TX49pSpp3bmHVAY";
 
